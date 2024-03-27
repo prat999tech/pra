@@ -76,7 +76,7 @@
 
     <script type="text/babel">
         const MAX_FILE_SIZE = 1000000;
-        const API_ENDPOINT = "https://jrl11k897k.execute-api.ap-south-1.amazonaws.com/default/s3presigned-url"; // Replace with your actual API endpoint
+        const API_ENDPOINT =  // Replace with your actual API endpoint
     
         const FileUploader = () => {
           const [fileName, setFileName] = React.useState('');
@@ -129,7 +129,6 @@
               />
               <button onClick={uploadFile}>Upload File</button>
               <p>File Name: {fileName}</p>
-              <p>Upload URL: {uploadURL}</p>
             </div>
           );
         };
