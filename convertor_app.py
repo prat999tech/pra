@@ -31,7 +31,7 @@ def download_to_s3(filename):
     try:
         s3 = boto3.client('s3')
 
-        bucket_name = "basu-doc-uploads"
+        bucket_name = "doc-uploads"
         filename = filename + ".docx"
 
         file_path = f"./inputs/{filename}"
@@ -60,7 +60,7 @@ def lambda_handler(name):
     convert_word_to_pdf(download_path, output_dir)
 
     # S3 bucket details
-    bucket_name = 'basu-pdf-output'
+    bucket_name = 'pdf-output'
     
     # Upload the PDF file to S3
     upload_to_s3(output_dir, bucket_name, object_key)
